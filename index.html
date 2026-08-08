@@ -21,7 +21,7 @@
     <style>
 
         /* =====================================================
-           BASIC RESET
+           RESET
         ===================================================== */
 
         * {
@@ -35,7 +35,6 @@
         }
 
         body {
-
             font-family:
                 Inter,
                 Arial,
@@ -53,12 +52,10 @@
             cursor: none;
         }
 
-
         a {
             text-decoration: none;
             color: inherit;
         }
-
 
         button,
         input,
@@ -68,27 +65,23 @@
 
 
         /* =====================================================
-           COLOR VARIABLES
+           VARIABLES
         ===================================================== */
 
         :root {
 
             --background: #08080d;
-
             --background-two: #0d0d14;
 
             --card: #111119;
-
             --card-light: #151520;
 
             --border: rgba(255,255,255,0.09);
 
             --text: #f5f5f7;
-
             --muted: #9696a8;
 
             --purple: #756cff;
-
             --purple-light: #a29cff;
 
             --blue: #6e8cff;
@@ -108,7 +101,6 @@
             position: fixed;
 
             width: 500px;
-
             height: 500px;
 
             background: #5147ff;
@@ -118,14 +110,12 @@
             opacity: 0.12;
 
             top: -200px;
-
             left: -150px;
 
             z-index: -1;
 
             pointer-events: none;
         }
-
 
         body::after {
 
@@ -134,7 +124,6 @@
             position: fixed;
 
             width: 500px;
-
             height: 500px;
 
             background: #734dff;
@@ -144,7 +133,6 @@
             opacity: 0.08;
 
             bottom: -200px;
-
             right: -150px;
 
             z-index: -1;
@@ -160,7 +148,6 @@
         .cursor-dot {
 
             width: 8px;
-
             height: 8px;
 
             background: white;
@@ -170,7 +157,6 @@
             position: fixed;
 
             top: 0;
-
             left: 0;
 
             pointer-events: none;
@@ -193,7 +179,6 @@
         .cursor-glow {
 
             width: 35px;
-
             height: 35px;
 
             border:
@@ -208,7 +193,6 @@
             position: fixed;
 
             top: 0;
-
             left: 0;
 
             pointer-events: none;
@@ -219,13 +203,9 @@
                 translate(-50%, -50%);
 
             transition:
-
                 width 0.2s ease,
-
                 height 0.2s ease,
-
                 background 0.2s ease,
-
                 border 0.2s ease;
         }
 
@@ -233,7 +213,6 @@
         .cursor-hover .cursor-dot {
 
             width: 12px;
-
             height: 12px;
         }
 
@@ -241,7 +220,6 @@
         .cursor-hover .cursor-glow {
 
             width: 60px;
-
             height: 60px;
 
             background:
@@ -287,7 +265,7 @@
             z-index: 1000;
 
             background:
-                rgba(15,15,22,0.85);
+                rgba(15,15,22,0.88);
 
             backdrop-filter:
                 blur(20px);
@@ -413,6 +391,21 @@
 
 
         /* =====================================================
+           ALL SECTIONS
+           FIXES OVERLAPPING WHEN USING NAVIGATION
+        ===================================================== */
+
+        section {
+
+            position: relative;
+
+            padding: 120px 0;
+
+            scroll-margin-top: 115px;
+        }
+
+
+        /* =====================================================
            HERO
         ===================================================== */
 
@@ -422,11 +415,15 @@
 
             padding-top: 150px;
 
+            padding-bottom: 80px;
+
             display: flex;
 
             align-items: center;
 
             position: relative;
+
+            scroll-margin-top: 0;
         }
 
 
@@ -482,7 +479,6 @@
         .status-dot {
 
             width: 9px;
-
             height: 9px;
 
             background:
@@ -561,7 +557,7 @@
 
 
         /* =====================================================
-           BUTTONS
+           HERO BUTTONS
         ===================================================== */
 
         .hero-buttons {
@@ -579,6 +575,8 @@
             display: inline-flex;
 
             align-items: center;
+
+            justify-content: center;
 
             gap: 12px;
 
@@ -640,6 +638,81 @@
 
             transform:
                 translateY(-4px);
+        }
+
+
+        /* =====================================================
+           SOCIAL ICONS
+        ===================================================== */
+
+        .social-icons {
+
+            display: flex;
+
+            gap: 18px;
+
+            margin-top: 35px;
+        }
+
+
+        .social-icon {
+
+            width: 66px;
+            height: 66px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.10);
+
+            background:
+                rgba(255,255,255,0.025);
+
+            color:
+                #9999aa;
+
+            transition:
+                transform 0.3s ease,
+                color 0.3s ease,
+                background 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .social-icon svg {
+
+            width: 25px;
+
+            height: 25px;
+
+            fill: currentColor;
+        }
+
+
+        .social-icon:hover {
+
+            color: white;
+
+            background:
+                rgba(255,255,255,0.08);
+
+            border-color:
+                rgba(255,255,255,0.25);
+
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                0 10px 30px
+                rgba(117,108,255,0.20);
         }
 
 
@@ -871,14 +944,8 @@
 
 
         /* =====================================================
-           SECTIONS
+           SECTION HEADINGS
         ===================================================== */
-
-        section {
-
-            padding: 120px 0;
-        }
-
 
         .section-label {
 
@@ -1108,7 +1175,6 @@
             position: absolute;
 
             width: 12px;
-
             height: 12px;
 
             border-radius: 50%;
@@ -1190,6 +1256,15 @@
                 var(--purple-light);
 
             line-height: 1;
+        }
+
+
+        .publication-meta {
+
+            color:
+                #777789;
+
+            font-size: 13px;
         }
 
 
@@ -1276,15 +1351,6 @@
         }
 
 
-        .publication-meta {
-
-            color:
-                #777789;
-
-            font-size: 13px;
-        }
-
-
         .publication-link {
 
             padding:
@@ -1326,7 +1392,7 @@
 
 
         /* =====================================================
-           SEARCH
+           PUBLICATION SEARCH
         ===================================================== */
 
         .search-box {
@@ -1451,7 +1517,7 @@
 
 
         /* =====================================================
-           CV
+           CV SECTION
         ===================================================== */
 
         .cv-section {
@@ -1650,7 +1716,7 @@
 
 
         /* =====================================================
-           MOBILE
+           TABLET
         ===================================================== */
 
         @media (max-width: 950px) {
@@ -1715,6 +1781,10 @@
         }
 
 
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
         @media (max-width: 600px) {
 
             nav {
@@ -1730,6 +1800,13 @@
             }
 
 
+            .logo {
+
+                font-size:
+                    18px;
+            }
+
+
             .resume-button {
 
                 padding:
@@ -1740,10 +1817,23 @@
             }
 
 
+            section {
+
+                padding:
+                    90px 0;
+
+                scroll-margin-top:
+                    90px;
+            }
+
+
             .hero {
 
                 padding-top:
                     120px;
+
+                padding-bottom:
+                    60px;
             }
 
 
@@ -1775,6 +1865,16 @@
 
                 grid-template-columns:
                     1fr 1fr;
+
+                margin-top:
+                    50px;
+            }
+
+
+            .stat {
+
+                padding:
+                    20px 10px;
             }
 
 
@@ -1789,6 +1889,8 @@
 
                 grid-template-columns:
                     40px 1fr;
+
+                gap: 15px;
             }
 
 
@@ -1819,6 +1921,35 @@
             }
 
 
+            .social-icons {
+
+                gap: 12px;
+
+                margin-top:
+                    28px;
+            }
+
+
+            .social-icon {
+
+                width:
+                    58px;
+
+                height:
+                    58px;
+            }
+
+
+            .social-icon svg {
+
+                width:
+                    22px;
+
+                height:
+                    22px;
+            }
+
+
             .footer-inner {
 
                 flex-direction:
@@ -1832,7 +1963,7 @@
 
 
         /* =====================================================
-           DISABLE CUSTOM CURSOR ON TOUCH DEVICES
+           TOUCH DEVICES
         ===================================================== */
 
         @media (hover: none) and (pointer: coarse) {
@@ -1950,7 +2081,7 @@
 
 
 <!-- =====================================================
-     HERO
+     HOME / HERO
 ===================================================== -->
 
 <section class="hero"
@@ -1963,7 +2094,7 @@
         <div class="hero-grid">
 
 
-            <!-- LEFT -->
+            <!-- LEFT SIDE -->
 
             <div class="fade-in">
 
@@ -2002,6 +2133,8 @@
                 </p>
 
 
+                <!-- BUTTONS -->
+
                 <div class="hero-buttons">
 
 
@@ -2025,17 +2158,85 @@
                 </div>
 
 
+
+                <!-- =================================================
+                     SOCIAL MEDIA ICONS
+
+                     Replace # with your actual links later.
+                ================================================== -->
+
+                <div class="social-icons">
+
+
+                    <!-- LINKEDIN -->
+
+                    <a href="#"
+                       class="social-icon"
+                       aria-label="LinkedIn"
+                       target="_blank">
+
+                        <svg viewBox="0 0 24 24"
+                             xmlns="http://www.w3.org/2000/svg">
+
+                            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.3zM5.32 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM3.54 20.45H7.1V8.99H3.54v11.46z"/>
+
+                        </svg>
+
+                    </a>
+
+
+
+                    <!-- FACEBOOK -->
+
+                    <a href="#"
+                       class="social-icon"
+                       aria-label="Facebook"
+                       target="_blank">
+
+                        <svg viewBox="0 0 24 24"
+                             xmlns="http://www.w3.org/2000/svg">
+
+                            <path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.96h-1.51c-1.49 0-1.95.93-1.95 1.88v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.1 24 18.1 24 12.07z"/>
+
+                        </svg>
+
+                    </a>
+
+
+
+                    <!-- INSTAGRAM -->
+
+                    <a href="#"
+                       class="social-icon"
+                       aria-label="Instagram"
+                       target="_blank">
+
+                        <svg viewBox="0 0 24 24"
+                             xmlns="http://www.w3.org/2000/svg">
+
+                            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5zm8.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+
+                        </svg>
+
+                    </a>
+
+
+                </div>
+
+
             </div>
 
 
 
-            <!-- RIGHT -->
+            <!-- RIGHT SIDE -->
 
             <div class="profile-wrapper fade-in">
 
 
                 <div class="profile-card">
 
+
+                    <!-- YOUR PHOTO -->
 
                     <img src="profile.jpg"
                          alt="Your Name"
@@ -2046,9 +2247,7 @@
 
 
                         <small>
-
                             CURRENTLY RESEARCHING
-
                         </small>
 
 
@@ -2073,7 +2272,9 @@
 
 
 
-        <!-- STATS -->
+        <!-- =================================================
+             STATS
+        ================================================== -->
 
         <div class="stats">
 
@@ -2155,9 +2356,7 @@
 
 
         <h2 class="section-title">
-
             Academic profile.
-
         </h2>
 
 
@@ -2255,9 +2454,7 @@
 
 
         <h2 class="section-title">
-
             Areas I explore.
-
         </h2>
 
 
@@ -2431,9 +2628,7 @@
 
 
         <h2 class="section-title">
-
             Academic journey.
-
         </h2>
 
 
@@ -2548,9 +2743,7 @@
 
 
                 <h2 class="section-title">
-
                     Selected research.
-
                 </h2>
 
 
@@ -2567,16 +2760,13 @@
 
             <div>
 
-
                 <div class="publication-count">
                     30+
                 </div>
 
-
                 <div class="publication-meta">
                     Publications
                 </div>
-
 
             </div>
 
@@ -2589,19 +2779,17 @@
 
         <div class="search-box">
 
-
             <input
                 type="text"
                 id="publicationSearch"
                 placeholder="Search publications..."
             >
 
-
         </div>
 
 
 
-        <!-- PUBLICATIONS -->
+        <!-- PUBLICATION LIST -->
 
         <div class="publication-list"
              id="publicationList">
@@ -2611,7 +2799,6 @@
 
             <div class="publication">
 
-
                 <div class="publication-number">
                     01
                 </div>
@@ -2619,11 +2806,9 @@
 
                 <div>
 
-
                     <h3>
                         Title of Your First Publication
                     </h3>
-
 
                     <div class="publication-meta">
 
@@ -2631,18 +2816,16 @@
 
                     </div>
 
-
                 </div>
 
 
-                <a href="https://example.com"
+                <a href="#"
                    target="_blank"
                    class="publication-link">
 
                     Read ↗
 
                 </a>
-
 
             </div>
 
@@ -2652,7 +2835,6 @@
 
             <div class="publication">
 
-
                 <div class="publication-number">
                     02
                 </div>
@@ -2660,11 +2842,9 @@
 
                 <div>
 
-
                     <h3>
                         Title of Your Second Publication
                     </h3>
-
 
                     <div class="publication-meta">
 
@@ -2672,18 +2852,16 @@
 
                     </div>
 
-
                 </div>
 
 
-                <a href="https://example.com"
+                <a href="#"
                    target="_blank"
                    class="publication-link">
 
                     Read ↗
 
                 </a>
-
 
             </div>
 
@@ -2693,7 +2871,6 @@
 
             <div class="publication">
 
-
                 <div class="publication-number">
                     03
                 </div>
@@ -2701,11 +2878,9 @@
 
                 <div>
 
-
                     <h3>
                         Title of Your Third Publication
                     </h3>
-
 
                     <div class="publication-meta">
 
@@ -2713,18 +2888,16 @@
 
                     </div>
 
-
                 </div>
 
 
-                <a href="https://example.com"
+                <a href="#"
                    target="_blank"
                    class="publication-link">
 
                     Read ↗
 
                 </a>
-
 
             </div>
 
@@ -2734,7 +2907,6 @@
 
             <div class="publication">
 
-
                 <div class="publication-number">
                     04
                 </div>
@@ -2742,11 +2914,9 @@
 
                 <div>
 
-
                     <h3>
                         Title of Your Fourth Publication
                     </h3>
-
 
                     <div class="publication-meta">
 
@@ -2754,18 +2924,16 @@
 
                     </div>
 
-
                 </div>
 
 
-                <a href="https://example.com"
+                <a href="#"
                    target="_blank"
                    class="publication-link">
 
                     Read ↗
 
                 </a>
-
 
             </div>
 
@@ -2775,7 +2943,6 @@
 
             <div class="publication">
 
-
                 <div class="publication-number">
                     05
                 </div>
@@ -2783,11 +2950,9 @@
 
                 <div>
 
-
                     <h3>
                         Title of Your Fifth Publication
                     </h3>
-
 
                     <div class="publication-meta">
 
@@ -2795,11 +2960,10 @@
 
                     </div>
 
-
                 </div>
 
 
-                <a href="https://example.com"
+                <a href="#"
                    target="_blank"
                    class="publication-link">
 
@@ -2807,26 +2971,12 @@
 
                 </a>
 
-
             </div>
-
 
 
             <!--
             =================================================
-            ADD MORE PUBLICATIONS HERE
-
-            Copy the publication block.
-
-            Change:
-
-            05 → 06
-            Publication title
-            Author
-            Journal
-            Year
-            Link
-
+            COPY THE BLOCK ABOVE TO ADD PUBLICATIONS 06–30+
             =================================================
             -->
 
@@ -2856,9 +3006,7 @@
 
 
         <h2 class="section-title">
-
             Experience & activities.
-
         </h2>
 
 
@@ -2875,18 +3023,13 @@
 
             <div class="experience-card">
 
-
                 <h3>
                     Research Experience
                 </h3>
 
-
                 <div class="company">
-
                     Research Institution / University
-
                 </div>
-
 
                 <p>
 
@@ -2896,25 +3039,19 @@
 
                 </p>
 
-
             </div>
 
 
 
             <div class="experience-card">
 
-
                 <h3>
                     Academic Experience
                 </h3>
 
-
                 <div class="company">
-
                     University / Department
-
                 </div>
-
 
                 <p>
 
@@ -2924,25 +3061,19 @@
 
                 </p>
 
-
             </div>
 
 
 
             <div class="experience-card">
 
-
                 <h3>
                     Professional Experience
                 </h3>
 
-
                 <div class="company">
-
                     Organization Name
-
                 </div>
-
 
                 <p>
 
@@ -2951,25 +3082,19 @@
 
                 </p>
 
-
             </div>
 
 
 
             <div class="experience-card">
 
-
                 <h3>
                     Academic Projects
                 </h3>
 
-
                 <div class="company">
-
                     Research & Projects
-
                 </div>
-
 
                 <p>
 
@@ -2978,7 +3103,6 @@
                     activities.
 
                 </p>
-
 
             </div>
 
@@ -3006,16 +3130,12 @@
 
 
             <div class="section-label">
-
                 CURRICULUM VITAE
-
             </div>
 
 
             <h2>
-
                 Want to know more?
-
             </h2>
 
 
@@ -3063,9 +3183,7 @@
 
 
         <h2 class="section-title">
-
             Let's connect.
-
         </h2>
 
 
@@ -3094,9 +3212,7 @@
                     Email:
 
                     <a href="mailto:your@email.com">
-
                         your@email.com
-
                     </a>
 
                 </p>
@@ -3105,7 +3221,6 @@
                 <p>
 
                     University:
-
                     <strong>
                         Your University
                     </strong>
@@ -3116,7 +3231,6 @@
                 <p>
 
                     Location:
-
                     Your City, Country
 
                 </p>
@@ -3137,7 +3251,7 @@
                 <p>
 
                     <a
-                        href="https://scholar.google.com"
+                        href="#"
                         target="_blank">
 
                         Google Scholar ↗
@@ -3150,7 +3264,7 @@
                 <p>
 
                     <a
-                        href="https://orcid.org"
+                        href="#"
                         target="_blank">
 
                         ORCID ↗
@@ -3163,7 +3277,7 @@
                 <p>
 
                     <a
-                        href="https://www.researchgate.net"
+                        href="#"
                         target="_blank">
 
                         ResearchGate ↗
@@ -3176,7 +3290,7 @@
                 <p>
 
                     <a
-                        href="https://www.linkedin.com"
+                        href="#"
                         target="_blank">
 
                         LinkedIn ↗
@@ -3220,9 +3334,7 @@
 
 
             <p>
-
                 Academic Portfolio
-
             </p>
 
 
@@ -3230,7 +3342,6 @@
 
 
     </div>
-
 
 </footer>
 
@@ -3259,10 +3370,8 @@
         "mousemove",
         function(event) {
 
-
             cursorDot.style.left =
                 event.clientX + "px";
-
 
             cursorDot.style.top =
                 event.clientY + "px";
@@ -3271,10 +3380,8 @@
             cursorGlow.style.left =
                 event.clientX + "px";
 
-
             cursorGlow.style.top =
                 event.clientY + "px";
-
 
         }
     );
@@ -3282,28 +3389,25 @@
 
 
     /* =====================================================
-       CURSOR HOVER
+       CURSOR HOVER EFFECT
     ===================================================== */
 
     const hoverElements =
         document.querySelectorAll(
-            "a, button, .research-card, .glass-card, .publication, .experience-card, .stat, .profile-card"
+            "a, button, .research-card, .glass-card, .publication, .experience-card, .stat, .profile-card, .social-icon"
         );
 
 
     hoverElements.forEach(
         function(element) {
 
-
             element.addEventListener(
                 "mouseenter",
                 function() {
 
-
                     document.body.classList.add(
                         "cursor-hover"
                     );
-
 
                 }
             );
@@ -3313,15 +3417,12 @@
                 "mouseleave",
                 function() {
 
-
                     document.body.classList.remove(
                         "cursor-hover"
                     );
 
-
                 }
             );
-
 
         }
     );
@@ -3348,14 +3449,12 @@
         "input",
         function() {
 
-
             const searchText =
                 this.value.toLowerCase();
 
 
             publications.forEach(
                 function(publication) {
-
 
                     const text =
                         publication.innerText
@@ -3366,26 +3465,20 @@
                         text.includes(searchText)
                     ) {
 
-
                         publication.style.display =
                             "grid";
-
 
                     }
 
                     else {
 
-
                         publication.style.display =
                             "none";
 
-
                     }
-
 
                 }
             );
-
 
         }
     );
@@ -3412,16 +3505,14 @@
         "scroll",
         function() {
 
-
             let current = "";
 
 
             sections.forEach(
                 function(section) {
 
-
                     const sectionTop =
-                        section.offsetTop - 220;
+                        section.offsetTop - 180;
 
 
                     if (
@@ -3429,15 +3520,12 @@
                         sectionTop
                     ) {
 
-
                         current =
                             section.getAttribute(
                                 "id"
                             );
 
-
                     }
-
 
                 }
             );
@@ -3446,32 +3534,26 @@
             navLinks.forEach(
                 function(link) {
 
-
                     link.style.color =
                         "#a5a5b5";
 
 
                     if (
-                        link.getAttribute(
-                            "href"
-                        ) === "#" + current
+                        link.getAttribute("href")
+                        ===
+                        "#" + current
                     ) {
-
 
                         link.style.color =
                             "#a29cff";
 
-
                     }
-
 
                 }
             );
 
-
         }
     );
-
 
 
     /* =====================================================
