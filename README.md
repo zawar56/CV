@@ -1,2 +1,0 @@
-# CV
-Education and Experience 
